@@ -7,8 +7,8 @@ let package = Package(
     name: "XcodebuildNvimPreview",
     platforms: [
         .macOS(.v14),
-        .iOS(.v15),
-        .tvOS(.v15),
+        .iOS(.v14),
+        .tvOS(.v14),
         .watchOS(.v6),
         .visionOS(.v1)
     ],
