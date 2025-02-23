@@ -16,6 +16,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-Read more: [Wiki](https://github.com/wojciech-kulik/xcodebuild.nvim/wiki/Integrations#%EF%B8%8F-previews)
+Read more: [Wiki](https://github.com/wojciech-kulik/xcodebuild.nvim/wiki/Integrations#-previews)
 
 [xcodebuild.nvim]: https://github.com/wojciech-kulik/xcodebuild.nvim
