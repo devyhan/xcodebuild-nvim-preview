@@ -1,12 +1,8 @@
 # xcodebuild-nvim-preview
 
-Swift Package enabling preview in Neovim when using xcodebuild.nvim
-
-See [xcodebuild.nvim](https://github.com/wojciech-kulik/xcodebuild.nvim)
+Swift Package for previewing SwiftUI, UIKit, and AppKit views in Neovim using [xcodebuild.nvim].
 
 ## Usage
-
-You need to setup desired preview in `AppDelegate` in `application(_:didFinishLaunchingWithOptions:)` method.
 
 ```swift
 import XcodebuildNvimPreview
@@ -19,3 +15,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     return true
 }
 ```
+
+Read more: [Wiki](https://github.com/wojciech-kulik/xcodebuild.nvim/wiki/Integrations#%EF%B8%8F-previews)
+
+[xcodebuild.nvim]: https://github.com/wojciech-kulik/xcodebuild.nvim
