@@ -13,7 +13,6 @@
             let targetSize = sizeThatFits(UIScreen.main.bounds.size)
             let bounds = CGRect(origin: .zero, size: targetSize)
             self.bounds = bounds
-            backgroundColor = .clear
 
             let renderer = UIGraphicsImageRenderer(size: targetSize)
             let image = renderer.image { _ in
