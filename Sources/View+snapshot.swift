@@ -24,7 +24,7 @@
         }
     #endif
 
-    extension View {
+    public extension View {
         @ViewBuilder
         func setupNvimPreview(view: @escaping () -> some View) -> some View {
             let arguments = ProcessInfo.processInfo.arguments
