@@ -5,4 +5,8 @@
 //  Copyright © 2025 Wojciech Kulik. All rights reserved.
 //
 
-public enum XcodebuildNvimPreview {}
+import Foundation
+
+public enum XcodebuildNvimPreview {
+    static let isInPreview = ProcessInfo.processInfo.arguments.contains("--xcodebuild-nvim-snapshot")
+}

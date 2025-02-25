@@ -10,11 +10,7 @@
 
     public extension XcodebuildNvimPreview {
         static func setup(view: any View) {
-            let arguments = ProcessInfo.processInfo.arguments
-
-            if arguments.contains("--xcodebuild-nvim-snapshot") {
-                view.snapshot()
-            }
+            if isInPreview { view.snapshot() }
         }
     }
 #endif

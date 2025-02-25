@@ -11,9 +11,7 @@
     public extension View {
         @ViewBuilder
         func setupNvimPreview(view: @escaping () -> some View) -> some View {
-            let arguments = ProcessInfo.processInfo.arguments
-
-            if arguments.contains("--xcodebuild-nvim-snapshot") {
+            if XcodebuildNvimPreview.isInPreview {
                 onAppear { view().snapshot() }
                     .onReceive(observeHotReload()) { view().snapshot() }
             } else {

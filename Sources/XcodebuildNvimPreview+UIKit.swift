@@ -14,11 +14,7 @@
         }
 
         static func setup(view: UIView) {
-            let arguments = ProcessInfo.processInfo.arguments
-
-            if arguments.contains("--xcodebuild-nvim-snapshot") {
-                view.snapshot()
-            }
+            if isInPreview { view.snapshot() }
         }
     }
 #endif
