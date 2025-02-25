@@ -14,12 +14,8 @@
             let arguments = ProcessInfo.processInfo.arguments
 
             if arguments.contains("--xcodebuild-nvim-snapshot") {
-                onAppear {
-                    view().snapshot()
-                }
-                .onReceive(NotificationCenter.default.publisher(for: .init("INJECTION_BUNDLE_NOTIFICATION"))) { _ in
-                    view().snapshot()
-                }
+                onAppear { view().snapshot() }
+                    .onReceive(observeHotReload()) { view().snapshot() }
             } else {
                 self
             }
