@@ -23,4 +23,22 @@
             }
         }
     #endif
+
+    extension View {
+        @ViewBuilder
+        func setupNvimPreview(view: @escaping () -> some View) -> some View {
+            let arguments = ProcessInfo.processInfo.arguments
+
+            if arguments.contains("--xcodebuild-nvim-snapshot") {
+                onAppear {
+                    XcodebuildNvimPreview.setup(view: view())
+                }
+                .onReceive(NotificationCenter.default.publisher(for: .init("INJECTION_BUNDLE_NOTIFICATION"))) { _ in
+                    XcodebuildNvimPreview.setup(view: view())
+                }
+            } else {
+                self
+            }
+        }
+    }
 #endif
