@@ -18,9 +18,6 @@
 
             if arguments.contains("--xcodebuild-nvim-snapshot") {
                 view.snapshot()
-                assertionFailure("Snapshot taken - force exit")
-            } else if arguments.contains("--xcodebuild-nvim-hotreload") {
-                view.snapshot()
             }
         }
     }

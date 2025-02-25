@@ -18,9 +18,6 @@
 
             if arguments.contains("--xcodebuild-nvim-snapshot") {
                 view.snapshot()
-                NSApp.terminate(nil)
-            } else if arguments.contains("--xcodebuild-nvim-hotreload") {
-                view.snapshot()
             }
         }
     }
