@@ -12,8 +12,12 @@
         @ViewBuilder
         func setupNvimPreview(view: @escaping () -> some View) -> some View {
             if XcodebuildNvimPreview.isInPreview {
-                onAppear { view().snapshot() }
-                    .onReceive(observeHotReload()) { view().snapshot() }
+                onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        view().snapshot()
+                    }
+                }
+                .onReceive(observeHotReload()) { view().snapshot() }
             } else {
                 self
             }
